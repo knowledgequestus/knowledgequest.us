@@ -102,12 +102,7 @@ const isMarkdownPage = (inputPath) => inputPath && inputPath.match(markdownFileT
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
-    eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
-eleventyConfig.addFilter("dateToZulu", (value) => new Date(value).toISOString());
   });
-  eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
-  module.exports = function (eleventyConfig) {
-    // ...lots of config...
   let markdownLib = markdownIt({
     breaks: true,
     html: true,
@@ -686,11 +681,10 @@ eleventyConfig.addFilter("dateToZulu", (value) => new Date(value).toISOString())
       return "";
     }
   });
-eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
+
   eleventyConfig.addFilter("jsonify", function(variable) {
     return JSON.stringify(variable) || '""';
   });
-  
 
   eleventyConfig.addFilter("validJson", function(variable) {
     if (Array.isArray(variable)) {
