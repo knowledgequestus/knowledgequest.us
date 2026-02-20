@@ -103,6 +103,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
   });
+  eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
+  
   let markdownLib = markdownIt({
     breaks: true,
     html: true,
