@@ -102,6 +102,8 @@ const isMarkdownPage = (inputPath) => inputPath && inputPath.match(markdownFileT
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
+    eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
+eleventyConfig.addFilter("dateToZulu", (value) => new Date(value).toISOString());
   });
   eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
   module.exports = function (eleventyConfig) {
