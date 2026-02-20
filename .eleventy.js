@@ -681,10 +681,11 @@ module.exports = function(eleventyConfig) {
       return "";
     }
   });
-
+eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
   eleventyConfig.addFilter("jsonify", function(variable) {
     return JSON.stringify(variable) || '""';
   });
+  
 
   eleventyConfig.addFilter("validJson", function(variable) {
     if (Array.isArray(variable)) {
