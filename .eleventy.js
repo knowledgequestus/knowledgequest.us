@@ -104,7 +104,8 @@ module.exports = function(eleventyConfig) {
     dynamicPartials: true,
   });
   eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
-  
+  module.exports = function (eleventyConfig) {
+    // ...lots of config...
   let markdownLib = markdownIt({
     breaks: true,
     html: true,
