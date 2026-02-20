@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/about-and-latest-articles-published/about-knowledge-quest-us/","tags":["gardenEntry"]}
 ---
 
-![Research library.jpg](/img/user/Images/Research%20library.jpg)
 My website explores a wide and ever-growing range of topics that I research and write about. You’ll find articles on subjects such as:
 
 **News & Current Events**
